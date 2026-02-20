@@ -2,17 +2,16 @@ import ScrollReveal from "./ScrollReveal";
 import { motion } from "framer-motion";
 
 const skills = [
-  { name: "UI/UX Design", level: 90, icon: "🎨" },
-  { name: "React / Next.js", level: 92, icon: "⚛️" },
-  { name: "TypeScript", level: 85, icon: "📘" },
-  { name: "Node.js", level: 80, icon: "🟢" },
-  { name: "Product Design", level: 78, icon: "📐" },
-  { name: "Figma / Framer", level: 88, icon: "🖌️" },
+  { name: "Generative AI & Gemini API", level: 95, icon: "🧠" },
+  { name: "Python & FastAPI", level: 75, icon: "🐍" },
+  { name: "React", level: 45, icon: "⚛️" },
+  { name: "Supabase & Database Design", level: 88, icon: "🗄️" },
+  { name: "AI Agents & Automation", level: 85, icon: "🤖" },
 ];
 
 const tools = [
-  "React", "TypeScript", "Next.js", "Tailwind CSS", "Figma", "Framer",
-  "Node.js", "PostgreSQL", "Git", "VS Code", "Vercel", "Supabase",
+  "Python", "FastAPI", "React", "Supabase", "Gemini API",
+  "Generative AI", "REST APIs", "Node.js", "TypeScript", "Tailwind CSS", "Git"
 ];
 
 const SkillBar = ({ name, level, delay }: { name: string; level: number; delay: number }) => (

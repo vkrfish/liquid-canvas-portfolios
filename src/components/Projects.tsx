@@ -1,35 +1,34 @@
 import ScrollReveal from "./ScrollReveal";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import projectHandwriting from "@/assets/project-handwriting.png";
+import projectVoice from "@/assets/project-voice.png";
+import projectCrime from "@/assets/project-crime.png";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    category: "Full-Stack Development",
-    description: "A modern e-commerce platform with real-time inventory, payment integration, and an admin dashboard built for a fashion startup.",
-    tags: ["React", "Node.js", "Stripe", "PostgreSQL"],
+    title: "AI Handwriting Generator",
+    category: "AI & Automation",
+    description: "Built a system that extracts text from PDFs/images using AI and recreates it in custom handwriting style, generating realistic handwritten PDFs.",
+    tags: ["AI", "Python", "PDF Generation", "Computer Vision"],
     color: "from-accent/20 to-cta/20",
+    image: projectHandwriting,
   },
   {
-    title: "SaaS Dashboard",
-    category: "UI/UX Design & Development",
-    description: "Complete redesign and development of an analytics dashboard serving 10K+ daily users with real-time data visualization.",
-    tags: ["Next.js", "TypeScript", "D3.js", "Tailwind"],
-    color: "from-cta/20 to-accent/10",
-  },
-  {
-    title: "Mobile Banking App",
-    category: "Product Design",
-    description: "End-to-end design for a fintech startup's mobile banking application, from user research to high-fidelity prototypes.",
-    tags: ["Figma", "User Research", "Prototyping"],
+    title: "Voice Assistant Backend",
+    category: "Python Automation",
+    description: "Developed a Python-based voice assistant capable of handling YouTube actions, email automation, timetable management, and system-level controls.",
+    tags: ["Python", "Automation", "NLP", "APIs"],
     color: "from-accent/10 to-cta/20",
+    image: projectVoice,
   },
   {
-    title: "Portfolio Generator",
-    category: "Open Source",
-    description: "An open-source tool that generates beautiful developer portfolios from GitHub data. 2K+ stars on GitHub.",
-    tags: ["React", "GitHub API", "Vercel", "Open Source"],
-    color: "from-cta/15 to-accent/15",
+    title: "Predictive Crime Analysis Agent",
+    category: "AI & Intelligence",
+    description: "Designing an AI system that forecasts possible crime locations and patterns using spatio-temporal data and intelligent reasoning.",
+    tags: ["AI", "Predictive Modeling", "Data Analysis", "Python"],
+    color: "from-accent/20 to-cta/10",
+    image: projectCrime,
   },
 ];
 
@@ -54,21 +53,24 @@ const Projects = () => {
               <motion.div
                 onHoverStart={() => setHoveredIndex(i)}
                 onHoverEnd={() => setHoveredIndex(null)}
-                className={`group relative rounded-2xl overflow-hidden border border-border bg-card transition-all duration-300 cursor-pointer ${
-                  hoveredIndex === i ? "shadow-xl shadow-accent/10 -translate-y-1" : ""
-                }`}
+                className={`group relative rounded-2xl overflow-hidden border border-border bg-card transition-all duration-300 cursor-pointer ${hoveredIndex === i ? "shadow-xl shadow-accent/10 -translate-y-1" : ""
+                  }`}
               >
-                {/* Gradient header */}
-                <div className={`h-48 bg-gradient-to-br ${project.color} relative flex items-center justify-center`}>
-                  <div className="text-6xl opacity-20 font-heading font-bold text-foreground/20">
+                {/* Image / Gradient header */}
+                <div className="h-64 relative overflow-hidden flex items-center justify-center">
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                  ) : (
+                    <div className={`absolute inset-0 bg-gradient-to-br ${project.color}`} />
+                  )}
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
+                  <div className="relative z-10 text-6xl opacity-20 font-heading font-bold text-white">
                     0{i + 1}
                   </div>
-                  <div
-                    className="absolute inset-0 opacity-30"
-                    style={{
-                      backgroundImage: "radial-gradient(circle at 50% 50%, hsl(217 91% 60% / 0.3), transparent 70%)",
-                    }}
-                  />
                 </div>
 
                 <div className="p-8">

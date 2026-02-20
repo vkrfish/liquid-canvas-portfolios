@@ -23,15 +23,14 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
           ? "glass-card-strong py-3"
           : "py-5 bg-transparent"
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
         <button onClick={() => scrollTo("home")} className="font-heading text-xl font-bold tracking-tight text-primary-foreground">
-          Alex<span className="gradient-text">Dev</span>
+          Vasanth<span className="gradient-text">Dev</span>
         </button>
 
         {/* Desktop */}

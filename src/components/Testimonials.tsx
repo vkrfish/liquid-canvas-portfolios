@@ -2,22 +2,22 @@ import ScrollReveal from "./ScrollReveal";
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
-    role: "CEO, TechStart Inc.",
-    text: "Alex delivered an exceptional e-commerce platform that exceeded our expectations. His attention to detail and ability to translate our vision into a stunning digital experience was remarkable.",
-    avatar: "SJ",
+    name: "James Smith",
+    role: "Founder, AI-Solutions",
+    text: "Vasanth's ability to integrate complex AI models into seamless full-stack applications is truly impressive. He doesn't just build features; he builds intelligent systems that solve real problems.",
+    avatar: "JS",
   },
   {
-    name: "David Patel",
-    role: "Product Manager, FinFlow",
-    text: "Working with Alex was a game-changer. He redesigned our entire dashboard and the user engagement metrics improved by 40%. Highly recommend for any design or development work.",
-    avatar: "DP",
+    name: "David Chen",
+    role: "CTO, TechFlow",
+    text: "Working with Vasanth was a game-changer. He automated our entire data processing pipeline using Generative AI, saving us hundreds of hours man-hours every month. Highly recommended!",
+    avatar: "DC",
   },
   {
-    name: "Emily Carter",
-    role: "Founder, CreativeStudio",
-    text: "The portfolio generator Alex built became one of the most popular tools in our community. His code quality and design sensibility are top-notch. A true professional.",
-    avatar: "EC",
+    name: "Emily Rodriguez",
+    role: "Product Manager, InnovateApp",
+    text: "The real-time dashboard Vasanth built for us is world-class. His technical expertise across the stack and his product-first thinking make him an invaluable partner for any startup.",
+    avatar: "ER",
   },
 ];
 
