@@ -15,12 +15,13 @@ const projects = [
     image: projectHandwriting,
   },
   {
-    title: "Voice Assistant Backend",
-    category: "Python Automation",
-    description: "Developed a Python-based voice assistant capable of handling YouTube actions, email automation, timetable management, and system-level controls.",
-    tags: ["Python", "Automation", "NLP", "APIs"],
+    title: "Audiora AI",
+    category: "AI Podcast Generation",
+    description: "AI-powered podcast generation meets audio social media. Create, discover, and share audio content in any language.",
+    tags: ["AI", "Next.js", "Podcast Generation", "Social Audio"],
     color: "from-accent/10 to-cta/20",
     image: projectVoice,
+    link: "https://audiora-ai.vercel.app/",
   },
   {
     title: "Predictive Crime Analysis Agent",
@@ -53,6 +54,7 @@ const Projects = () => {
               <motion.div
                 onHoverStart={() => setHoveredIndex(i)}
                 onHoverEnd={() => setHoveredIndex(null)}
+                onClick={() => project.link && window.open(project.link, "_blank")}
                 className={`group relative rounded-2xl overflow-hidden border border-border bg-card transition-all duration-300 cursor-pointer ${hoveredIndex === i ? "shadow-xl shadow-accent/10 -translate-y-1" : ""
                   }`}
               >
